@@ -1,0 +1,300 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: top 0.3s;
+}
+
+header.hidden {
+    top: -100px; /* Hide the header */
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+    margin-top: 70px; /* Adjust for fixed header */
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 70px; /* Adjust for fixed header */
+    font-family: 'Playfair Display', serif;
+}
+
+.hero img {
+    width: 70vh; /* Adjust the width and height to your needs */
+    height: 70vh;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-text {
+    position: absolute;
+    top: 0%; /* Adjust to make the text higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    /*font-family: "Merriweather", Times, serif;*/
+    color: white;
+}
+
+.introduction, .featured-services, .testimonials, .about, .services, .booking-info, .contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.introduction h2, .featured-services h2, .testimonials h2, .about h2, .services h2, .booking-info h2, .contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.service, .service-category {
+    margin-bottom: 20px;
+}
+
+.service h3, .service-category h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer .contact-info, footer .social-media, footer .newsletter {
+    margin-bottom: 20px;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #ddd;
+}
+
+footer .newsletter form {
+    display: inline-block;
+}
+
+footer .newsletter input[type="email"] {
+    padding: 0px;
+    font-size: 14px;
+}
+
+footer .newsletter button {
+    padding: 10px;
+    font-size: 16px;
+    background: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+footer .newsletter button:hover {
+    background: #ccc;
+}
+
+/* Contact form styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+form button {
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #444;
+}
+
+h1 {
+    color: #ccc;
+}
+
+h2 {
+    color: #ccc;
+}
+
+h3 {
+    color: #ccc;
+}
+
+p {
+    color: #ccc;
+}
+
+blockquote {
+    color: #ccc;
+}
+label{
+    color: #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header .logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    header nav ul li {
+        margin: 10px;
+        white-space: nowrap;
+    }
+
+    .hero img {
+        width: 50vh; /* Adjust the width and height to your needs */
+        height: 50vh;
+    }
+
+    .hero-text {
+        padding: 10px;
+        top: 5%;
+    }
+
+    .introduction h2, .featured-services h2, .testimonials h2, .about h2, .services h2, .booking-info h2, .contact h2 {
+        font-size: 28px;
+    }
+
+    .service h3, .service-category h3 {
+        font-size: 24px;
+    }
+
+    footer .newsletter input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer .newsletter button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 18px;
+    }
+
+    .hero img {
+        width: 40vh; /* Adjust the width and height to your needs */
+        height: 40vh;
+    }
+
+    .hero-text {
+        padding: 10px;
+        top: 20%;
+    }
+
+    .introduction h2, .featured-services h2, .testimonials h2, .about h2, .services h2, .booking-info h2, .contact h2 {
+        font-size: 24px;
+    }
+
+    .service h3, .service-category h3 {
+        font-size: 20px;
+    }
+}
